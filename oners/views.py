@@ -32,25 +32,29 @@ def SignUp(request):
         email = request.POST['email']
         password = request.POST['password']
 
-        # check for errorneous input
         if len(username) > 10:
-            messages.error(request, "Plase Enter The User Name Under 10 Char.")
+            messages.error(request, "Please enter the username under 10 characters.")
             return redirect('/oners/SignUp')
 
         if not username.isalnum():
-            messages.error(
-                request, "Username should only contain letters and number")
+            messages.error(request, "Username should only contain letters and numbers.")
             return redirect('/oners/SignUp')
 
         if User.objects.filter(username=username).exists():
-            messages.error(request, "This Username should All Ready Taken")
+            messages.error(request, "This username is already taken.")
             return redirect('/oners/SignUp')
+
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
-        messages.success(
-            request, f"Account Created sucessfully. Your Username is {username} and Password is {password}")
+
+        # Create Profile object after user creation
+        Profile.objects.create(profile_user=myuser)
+
+        messages.success(request, f"Account created successfully. Your username is {username}")
+        return redirect('/oners/Login')  # redirect to login or any page after signup
+
     return render(request, 'oners/Accounts/SignUp.html')
 
 
