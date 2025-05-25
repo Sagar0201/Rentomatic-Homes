@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j3=)&$f6d=+vpu6!v*e((#3($c-jwjc@3i+zr$e9shioby7^)$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['rentomatichomes.onrender.com', 'localhost','127.0.0.1','*']
 
 
