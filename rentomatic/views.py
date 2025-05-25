@@ -7,9 +7,9 @@ from oners.models import Rentales
 
 
 def home(request):
-    home_rentals = []
-    for i in Rentales.objects.all():
-        home_rentals.append(i)
-        if len(home_rentals) == 3:
-            break
+    try:
+        home_rentals = list(Rentales.objects.all()[:3])
+    except Rentales.DoesNotExist:
+        home_rentals = []
+
     return render(request, 'index.html', {"home_rentals": home_rentals})
