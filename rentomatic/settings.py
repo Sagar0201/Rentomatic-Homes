@@ -85,10 +85,11 @@ DATABASES = {
         'NAME': 'riomario',
         'USER': 'riomario_user',
         'PASSWORD': 'EHodDnPCFapMMiQj4YqUqQWozSjT1w3J',
-        'HOST': 'dpg-d0pnbq8dl3ps73avhc5g-a',
+        'HOST': 'dpg-d0pnbq8dl3ps73avhc5g-a.oregon-postgres.render.com',
         'PORT': '5432',
     }
 }
+
 
 
 
