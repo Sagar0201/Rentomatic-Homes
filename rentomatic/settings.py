@@ -81,10 +81,15 @@ WSGI_APPLICATION = 'rentomatic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'riomario',
+        'USER': 'riomario_user',
+        'PASSWORD': 'EHodDnPCFapMMiQj4YqUqQWozSjT1w3J',
+        'HOST': 'dpg-d0pnbq8dl3ps73avhc5g-a',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
