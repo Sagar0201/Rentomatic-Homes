@@ -11,3 +11,9 @@ python manage.py collectstatic --no-input
 # Apply any outstanding database migrations
 python manage.py makemigrations
 python manage.py migrate
+
+python manage.py makemigrations oners
+python manage.py migrate
+
+python manage.py makemigrations customers
+python manage.py migrate
