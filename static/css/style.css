@@ -1027,7 +1027,9 @@ a:hover {
   font-size: 1.2rem;
 }
 
-
+.intro-single {
+  padding-top: 9rem;
+}
 
 /*================================================================
                            house Posts
