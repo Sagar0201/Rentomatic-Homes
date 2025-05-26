@@ -82,13 +82,14 @@ WSGI_APPLICATION = 'rentomatic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'riomario',
-        'USER': 'riomario_user',
-        'PASSWORD': 'EHodDnPCFapMMiQj4YqUqQWozSjT1w3J',
-        'HOST': 'dpg-d0pnbq8dl3ps73avhc5g-a.oregon-postgres.render.com',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'Pass@12345',
+        'HOST': 'db.gphqiokuwpofwsnljawn.supabase.co',
         'PORT': '5432',
     }
 }
+
 
 
 
