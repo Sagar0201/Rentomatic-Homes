@@ -87,8 +87,12 @@ DATABASES = {
         'PASSWORD': 'Pass@12345',
         'HOST': 'db.gphqiokuwpofwsnljawn.supabase.co',
         'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
+
 
 
 
