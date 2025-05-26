@@ -96,7 +96,7 @@ def AddHome(request):
         home_city = home_city.capitalize()
         home_info = request.POST.get('home_info')
         home_address = request.POST.get('home_address')
-        home_rent = request.POST.get('rent')
+        home_rent = int(request.POST.get('rent'))
 
         params = {"user_mobile_no": oner_mobile_no, "home_image": home_image,
                   "home_name": home_name, "city": home_city, "home_info": home_info, "home_address": home_address, "rent": home_rent}

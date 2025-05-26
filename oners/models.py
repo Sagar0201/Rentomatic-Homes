@@ -12,12 +12,12 @@ from django.db.models.signals import post_save
 
 class Rentales(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    oner_mobile_no = models.IntegerField(default=0)
+    oner_mobile_no = models.BigIntegerField(default=0)
     home_image = models.ImageField(upload_to="static/images")
     home_name = models.CharField(max_length=50, default="unknown")
-    home_city = models.CharField(max_length=50, )
-    home_info = models.CharField(max_length=500,)
-    home_address = models.CharField(max_length=200,)
+    home_city = models.CharField(max_length=50 )
+    home_info = models.CharField(max_length=500)
+    home_address = models.CharField(max_length=200)
     home_rent = models.IntegerField(default=0)
 
     def __str__(self):
