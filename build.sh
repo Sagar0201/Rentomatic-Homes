@@ -12,8 +12,3 @@ python manage.py collectstatic --no-input
 python manage.py makemigrations
 python manage.py migrate
 
-python manage.py makemigrations oners
-python manage.py migrate
-
-python manage.py makemigrations customers
-python manage.py migrate
